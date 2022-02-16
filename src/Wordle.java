@@ -33,6 +33,7 @@ public class Wordle {
             for (int i = 0; i < 5; i++) {
                 char a = word.charAt(i);
                 char b = s.charAt(i);
+                // TODO add index check for 0
                 if (a != b && guess.getNum(i) == 2) return true;
                 if ((a == b || !word.contains(b + "")) && guess.getNum(i) == 1) return true;
                 if (a == b && guess.getNum(i) == 0) return true;
